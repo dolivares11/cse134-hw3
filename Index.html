@@ -46,7 +46,7 @@
                 <picture>
                     <source type="image/jxl" srcset="images/Resume.jxl">
                     <source type="image/jpeg" srcset="images/Resume.jpg">
-                    <img src="images/Resume.jpg" width="500"alt="Resume">
+                    <img src="images/Resume.jpg" width="500" alt="Resume">
                 </picture>
                 <button type="submit">Download</button>
             </section>
@@ -157,35 +157,40 @@
                     <p>Ice cream</p>
                 </details>
 
-                <div id="media">
+                <div id="media/random">
+                    <h3>Figure</h3>
                     <figure id="fig1">
                         <img src="images/machuPichu.jpg" width="300" height="200" alt="Machu Pichu">
                         <figcaption>This is Machu Pichu in Peru, and this is a place I aspire to go to one day.</figcaption>
                     </figure>
 
+                    <h3>Audio</h3>
                     <audio src="http://htmlref.com/ch2/music.wav" controls></audio>
 
+                    <h3>Canvas</h3>
                     <canvas id="canvas">
                         <strong>Canvas Supporting Browser Required</strong>
                     </canvas>
-                    <video src="" autoplay controls>
-                        <source src="http://htmlref.com/ch2/html_5.mp4" type="video/mp4">
+
+                    <h3>Video</h3>
+                    <video src="http://htmlref.com/ch2/html_5.mp4" autoplay controls>
                         <strong>Video Supporting Browser Required</strong>
                     </video>
 
+                    <h3>SVG</h3>
                     <svg width="200" height="200">
                         <circle cx="100" cy="100" r="50" fill="red" stroke="black" stroke-width="5"/>
                     </svg>
 
-                    <iframe src="https://courageous-crisp-bda79a.netlify.app/" frameborder="0" name="floater" id="floater" width="200" height="200">
-                        Content not supported by your browser.
-                    </iframe>
+                    <h3>IFrame</h3>
+                    <iframe sandbox srcdoc="<p>I can practically make a new website in this iframe</p>"></iframe>                    </iframe>
 
                     <template>
                         <h1> Hello, this will store my template</h1>
                         <p> This is a template</p>
                     </template>
 
+                    <h3>span, code, em, i, br</h3>
                     <p>
                         This is just filler text to <em>demonstrate</em> my <i>understanding</i> of the code, em, span, i, and br elements.
                         <span>This is a span element that can be declared using <code>
@@ -203,13 +208,31 @@
                         X | O | X
                     </pre>
 
+                    <h3>MathML</h3>
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow>
+                            <msup>
+                                <mi>E</mi>
+                            </msup>
+                            <mo>=</mo>
+                            <msup>
+                                <mi>m</mi>
+                            </msup>
+                            <msup>
+                                <mi>c</mi>
+                                <mn>2</mn>
+                            </msup>
+                        </mrow>
+                      </math>
+                    <p>Extra Credit Question 2: The reason for developers not making use of MathML until recently was because
+                        there was no heavy wanted support for it as other browsers were not supporting it, then chrome didn't really see a reason to 
+                        do it themselves.
+                    </p>
                     <script>
                         var canvas = document.getElementById("canvas");
                         var context = canvas.getContext("2d");
                         context.fillStyle = "red";
                         context.fillRect(10, 10, 100, 100);
-                        context.fillStyle = "blue";
-                        context.fillRect(150, 10, 100, 100);
                     </script>
                 </div>
             </section>
