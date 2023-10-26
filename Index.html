@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Resume.html">Resume</a></li>
+                    <li><a href="Skills.html">Skills</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="about">
+                <picture>
+                    <source media="(min-width: 650px)" srcset="images/ProfilePic.jpg">
+                    <source media="(min-width: 465px)" srcset="images/ProfilePic.jpg">
+                    <img src="images/ProfilePic.jpg" alt="Profile Picture">
+                    <caption>Profile Picture</caption>
+                </picture>
+                <h1>Hi, I'm Dylan Olivares</h1>
+                <p>I am an enthusiastic software engineer looking for new opportunities</p>
+                <p>Outside of coding I like to:</p>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li><a href="">Project 1</a></li>
+                    <li><a href="">Project 2</a></li>
+                    <li><a href="">Project 3</a></li>
+                    <li><a href="">Project 4</a></li>
+                </ul>
+            </section>
+
+            <section id="resume">
+                <h2>Resume</h2>
+                <picture>
+                    <source media="(min-width: 650px)" srcset="images/Resume.jpg">
+                    <source media="(min-width: 465px)" srcset="images/Resume.jpg">
+                    <img src="images/Resume.jpg" alt="Resume">
+                    <caption>Resume</caption>
+                </picture>
+                <button type="submit">Download</button>
+            </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Frontend</th>
+                            <th>Backend</th>
+                            <th>Languages</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Node.js</td>
+                            <td>C++</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>Express</td>
+                            <td>Java</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>MySQL</td>
+                            <td>Python</td>
+                        </tr>
+                        <tr>
+                            <td>React</td>
+                            <td>MongoDB</td>
+                            <td>Dart</td>
+                        </tr>
+                        <tr>
+                            <td>Flutter</td>
+                            <td>Firebase</td>
+                            <td>MATLAB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Feel free to contact me</p>
+                <form action="mailto:example@gmail.com" method="POST">
+                    <label for="name">Name:
+                        <input type="text" name="name" id="name">
+                    </label>
+                    <label for="email">Email:
+                        <input type="email" name="email" id="email">
+                    </label>
+                    <label for="message">Message:
+                        <textarea name="message" id="message"></textarea>
+                    </label>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+
+            <section id="experiment">
+                <div id="forms">
+                    <h2>Experiment</h2>
+                    <form>
+                        <fieldset>
+                            <legend>Favorite Food</legend>
+                            <label for="favFood">What is your favorite food?
+                                <input type="text" name="favFood" id="favFood" />
+                                <datalist for="favFood">
+                                    <option value="pizza">Pizza</option>
+                                    <option value="burger">Burger</option>
+                                    <option value="taco">Taco</option>
+                                    <option value="pasta">Pasta</option>
+                                    <option value="salad">Salad</option>
+                                </datalist>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Favorite School</legend>
+                            <label for="favSchool">What is your favorite school out of the UCs?
+                                <select name="favSchool" id="favSchool" multiple="favSchool">
+                                    <option value="UCSD">UCSD</option>
+                                    <option value="UCSB">UCSB</option>
+                                    <option value="UCLA">UCLA</option>
+                                    <option value="UCB">UCB</option>
+                                    <option value="UCR">UCR</option>
+                                    <option value="UCSC">UCSC</option>
+                                    <option value="UCM">UCM</option>
+                                    <option value="UCD">UCD</option>
+                                    <option value="UCI">UCI</option>
+                                </select>
+                            </label>
+                        </fieldset>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <details>
+                        <summary>My favorite food</summary>
+                        <p>Ice cream</p>
+                    </details>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Created by Dylan Olivares</p>
+        </footer>
+    </body>
+</html>
