@@ -52,6 +52,7 @@ ul#menu > li > a {
 section {
     height: 100vh;
     display: block;
+    border-bottom: 1px solid #ccc;
 }
 
 #about img {
