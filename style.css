@@ -53,6 +53,9 @@ section {
     height: 100vh;
     display: block;
     border-bottom: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #about img {
@@ -61,5 +64,129 @@ section {
     height: 300px;
     display: inline-block;
     margin-top: 10%
+}
+
+section#projects ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1.5vw;
+    width: 90%;
+    height: 90%;
+}
+
+section#projects ol li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #f8e6f7;
+    font-size: 3rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 1vw;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    cursor: pointer;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+section#projects ol li picture {
+    width: 100%;
+    height: 100%;
+}
+
+section#projects ol li picture img, source {
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s ease-in-out;
+}
+
+section#projects ol li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+section#projects ol li:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+section#projects ol li:nth-child(2) {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+section#projects ol li:nth-child(3) {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+section#resume picture {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+section#resume button {
+    
+}
+
+section#skills table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+section#skills table thead {
+    background-color: #333;
+    color: white;
+
+}
+
+section#skills table tr td {
+    border: 1px solid #ccc;
+    padding: 1vw;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+    background-color: #f8e6f7;
+    border-radius: 1vw;
+}
+
+section#contact form {
+    background-color: lightblue;
+    border-radius: 1vw;
+    padding: 1vw;
+    width: 50%;
+    margin: 0 auto;
+}
+
+section#contact form label {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 1vh;
+}
+
+section#contact form input, textarea {
+    width: 100%;
+    margin-bottom: 1vh;
+    padding: 1vh;
+    border-radius: 1vw;
+    border: 1px solid #ccc;
 }
 
