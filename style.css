@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Poppins:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:ital,wght@0,400;1,300&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,8 +6,7 @@
 
 :root {
     --primary-color: #333;
-    /* --secondary-color: pink; */
-    --secondary-color: color()
+    --secondary-color: color(display-p3 1 0.6863 0.7882);
     --page-color: #f5f5f5;
     --border-color: #ccc;
     --primary-font: 'Inconsolata';
@@ -15,25 +14,27 @@
 }
 
 html {
+    
     font-family: var(--primary-font), var(--secondary-font);
 }
 
 header {
+    width: 100%;
 }
 
 body {
     background-color: var(--page-color, #f5f5f5);
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 nav {
     z-index: 100;
     position: fixed;
     top: 0;
-    right: 0;
-    width: 50%;
+    width: 100%;
     color: white;
-    margin-top: 10px;
+    margin-top: .5rem;
 }
 
 ul#menu {
@@ -43,17 +44,18 @@ ul#menu {
     text-align: center;
 }
 
-ul#menu > li {
+ul#menu > li:has(a) {
     display: inline-block;
     border-radius: 1dvw;
-    background-color: rgba(255, 192, 203, .5);
+    /* background-color: rgba(255, 192, 203, .5); */
+    background-color: var(--secondary-color, pink);
 }
 
 ul#menu > li > a {
     color: black;
     text-decoration: none;
     display: block;
-    padding: 1em;
+    padding: 1rem;
 }
 
 section {
@@ -65,15 +67,15 @@ section {
     border-bottom: 1px solid var(--border-color, #ccc);
 }
 
-section#about h1 {
+#about h1 {
     font-size: 3rem;
     margin: 0;
-    padding: 1dvh;
+    padding: 1rem;
 }
 
-section#about p {
+#about p {
     font-size: 1.5rem;
-    padding: 1dvh;
+    padding: 1rem;
 }
 
 section > h2 {
@@ -82,14 +84,14 @@ section > h2 {
 }
 
 #about img {
-    border-radius: 50%;
+    border-radius: 10rem;
     width: 300px;
     height: 300px;
     display: inline-block;
     margin-top: 10%;
 }
 
-section#projects ol {
+#projects ol {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -98,7 +100,7 @@ section#projects ol {
     height: 90%;
 }
 
-section#projects ol li {
+#projects ol li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,31 +108,31 @@ section#projects ol li {
     justify-content: center;
     font-size: 3rem;
     color: white;
-    border-radius: 1dvw;
+    border-radius: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, .5);
     cursor: pointer;
     position: relative;
     transition: all .5s ease-in-out;
 }
 
-section#projects ol li > h3 {
+#projects ol li > h3 {
     z-index: 90;
     margin: 0;
     width: 100%;
     display: flex;
     font-size: 2rem;
-    margin: 1dvh 0 0 1dvw;
+    margin: 1rem 0 0 1rem;
 }
 
-section#projects ol li picture {
+#projects ol li picture {
     width: 100%;
     height: 100%;
 }
 
-section#projects ol li picture img {
+#projects ol li picture img {
     width: 100%;
     height: 100%;
-    border-radius: 1dvw;
+    border-radius: 1rem;
     object-fit: cover;
     object-position: center;
     position: absolute;
@@ -140,54 +142,54 @@ section#projects ol li picture img {
     filter: blur(2px); /* Adjust the value to control the level of blur */
 }
 
-section#projects ol li a {
+#projects ol li a {
     display: block;
     text-decoration: none;
     color: inherit;
 }
 
-section#projects ol li:hover {
+#projects ol li:hover {
     transform: translateY(-10px);
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-section#projects ol li:nth-child(1) {
+#projects ol li:nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 1;
 }
 
-section#projects ol li:nth-child(2) {
+#projects ol li:nth-child(2) {
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-section#projects ol li:nth-child(3) {
+#projects ol li:nth-child(3) {
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 3;
     grid-column-end: 4;
 }
 
-section#resume {
+#resume {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-section#resume > h2 {
+#resume > h2 {
     width: 100%;
 }
 
-section#resume picture {
+#resume picture {
     height: 85%;
 }
 
-section#resume picture img {
+#resume picture img {
     height: 100%;
     align-items: center;
     display: block;
@@ -195,58 +197,178 @@ section#resume picture img {
 
 }
 
-section#resume button {
+#resume button {
     background-color: var(--primary-color, #333);
     color: white;
     border: none;
     margin: auto 0;
-    padding: .5dvh 1dvw;
-    border-radius: 1dvw;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-section#contact form {
+#contact form {
     display: block;
     background-color: rgb(205, 232, 241);
-    border-radius: 1dvw;
-    padding: 1dvw;
+    border-radius: 1rem;
+    padding: 0 1rem 1rem 1rem;
     width: 50%;
     border: 1px solid var(--border-color, #ccc);
     margin: auto auto;
 }
 
-section#contact form h3 {
+#contact form h3 {
     text-align: center;
-    margin-bottom: 1dvw;
+    margin: 1rem 0 1rem 0;
 }
 
-section#contact form label {
+#contact form label {
     display: block;
     text-align: left;
-    margin-bottom: 1dvh;
+    margin-bottom: 1rem;
 }
 
-section#contact form input, textarea {
+#contact form, input, textarea {
+    font-size: 1rem;
+}
+
+#contact form input, textarea {
     width: 100%;
-    margin-bottom: 1dvh;
-    padding: 1dvh;
-    border-radius: 1dvw;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
     border: 1px solid var(--border-color, #ccc);
 }
 
-section#contact form textarea {
-    height: 30vh;
+#contact form textarea {
+    height: 30dvh;
     resize: none;
 }
 
-section#contact form button {
+#contact form button {
     background-color: var(--primary-color, #333);
     color: white;
     border: none;
-    padding: .5dvh 1dvw;
-    border-radius: 1dvw;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
+#contact {
+    border: none;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    /* Your styles for small screens here */
+    html {
+        font-size: 15px;
+    }
+
+    #about {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #about h1, p {
+        margin: 0;
+    }
+
+    #projects ol {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #projects ol li {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #resume picture, img {
+        width: 100%;
+    }
+
+    #contact form {
+        width: 90%;
+        font-size: 1.5rem
+    }
+
+    #contact form input {
+        height: 5dvh
+    }
+    
+    #contact form textarea {
+        height: 30dvh;
+        resize: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+/* Your styles for medium screens here */
+    html {
+        font-size: 30px;
+    }
+
+    nav ul#menu > li > a {
+        padding: .5rem;
+    }
+
+    #about {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #about h1, p {
+        margin: 0;
+    }
+
+    #projects ol {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #projects ol li {
+        width: 100%;
+        height: 100%;
+    }
+
+    #resume picture, img {
+        width: 90%;
+    }
+
+    #contact form {
+        width: 90%;
+    }
+
+    #contact form h3 {
+        text-align: center;
+        margin: 1rem 0 1rem 0;
+    }
+
+    #contact form, input, textarea {
+        font-size: 1rem;
+    }
+
+    #contact form input {
+        height: 5dvh
+    }
+    
+    #contact form textarea {
+        height: 30dvh;
+        resize: none;
+    }
+}
