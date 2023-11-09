@@ -1,29 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Poppins:ital,wght@0,400;1,300&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 :root {
     --primary-color: #333;
+    /* --secondary-color: pink; */
+    --secondary-color: color()
+    --page-color: #f5f5f5;
+    --border-color: #ccc;
+    --primary-font: 'Inconsolata';
+    --secondary-font: monospace;
 }
 
 html {
-    font-family: sans-serif;
-    margin: 0 10px 10px 10px;
+    font-family: var(--primary-font), var(--secondary-font);
 }
 
 header {
 }
 
 body {
-    background-color: #f5f5f5;
-    margin: 0;
+    background-color: var(--page-color, #f5f5f5);
+    margin-top: 0;
 }
 
 nav {
+    z-index: 100;
     position: fixed;
     top: 0;
     right: 0;
-    width: 33%;
+    width: 50%;
     color: white;
     margin-top: 10px;
 }
@@ -32,30 +40,45 @@ ul#menu {
     list-style: none;
     margin: 0;
     padding: 0;
-    color: white;
     text-align: center;
 }
 
 ul#menu > li {
     display: inline-block;
-    background-color: pink;
-    border-radius: 1vw;
+    border-radius: 1dvw;
+    background-color: rgba(255, 192, 203, .5);
 }
 
 ul#menu > li > a {
-    color: white;
+    color: black;
     text-decoration: none;
     display: block;
     padding: 1em;
 }
 
 section {
-    height: 100vh;
-    display: block;
-    border-bottom: 1px solid #ccc;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border-color, #ccc);
+}
+
+section#about h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 1dvh;
+}
+
+section#about p {
+    font-size: 1.5rem;
+    padding: 1dvh;
+}
+
+section > h2 {
+    font-size: 2rem;
+    width: 100%;
 }
 
 #about img {
@@ -63,14 +86,14 @@ section {
     width: 300px;
     height: 300px;
     display: inline-block;
-    margin-top: 10%
+    margin-top: 10%;
 }
 
 section#projects ol {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 1.5vw;
+    grid-gap: 1.5dvw;
     width: 90%;
     height: 90%;
 }
@@ -81,15 +104,22 @@ section#projects ol li {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background-color: #f8e6f7;
     font-size: 3rem;
     color: white;
-    font-weight: 500;
-    border-radius: 1vw;
+    border-radius: 1dvw;
     border-bottom: 1px solid rgba(0, 0, 0, .5);
     cursor: pointer;
     position: relative;
     transition: all .5s ease-in-out;
+}
+
+section#projects ol li > h3 {
+    z-index: 90;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    font-size: 2rem;
+    margin: 1dvh 0 0 1dvw;
 }
 
 section#projects ol li picture {
@@ -97,16 +127,23 @@ section#projects ol li picture {
     height: 100%;
 }
 
-section#projects ol li picture img, source {
+section#projects ol li picture img {
     width: 100%;
     height: 100%;
-    border-radius: 1vw;
+    border-radius: 1dvw;
     object-fit: cover;
     object-position: center;
     position: absolute;
     top: 0;
     left: 0;
     transition: all .5s ease-in-out;
+    filter: blur(2px); /* Adjust the value to control the level of blur */
+}
+
+section#projects ol li a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 section#projects ol li:hover {
@@ -135,58 +172,81 @@ section#projects ol li:nth-child(3) {
     grid-column-end: 4;
 }
 
-section#resume picture {
-    justify-content: center;
+section#resume {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section#resume > h2 {
+    width: 100%;
+}
+
+section#resume picture {
+    height: 85%;
+}
+
+section#resume picture img {
+    height: 100%;
+    align-items: center;
+    display: block;
+    margin: 0 auto;
+
 }
 
 section#resume button {
-    
-}
-
-section#skills table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-section#skills table thead {
-    background-color: #333;
+    background-color: var(--primary-color, #333);
     color: white;
-
-}
-
-section#skills table tr td {
-    border: 1px solid #ccc;
-    padding: 1vw;
-    text-align: center;
+    border: none;
+    margin: auto 0;
+    padding: .5dvh 1dvw;
+    border-radius: 1dvw;
     font-size: 1.5rem;
-    font-weight: 500;
-    color: #333;
-    background-color: #f8e6f7;
-    border-radius: 1vw;
+    cursor: pointer;
 }
 
 section#contact form {
-    background-color: lightblue;
-    border-radius: 1vw;
-    padding: 1vw;
+    display: block;
+    background-color: rgb(205, 232, 241);
+    border-radius: 1dvw;
+    padding: 1dvw;
     width: 50%;
-    margin: 0 auto;
+    border: 1px solid var(--border-color, #ccc);
+    margin: auto auto;
+}
+
+section#contact form h3 {
+    text-align: center;
+    margin-bottom: 1dvw;
 }
 
 section#contact form label {
     display: block;
     text-align: left;
-    width: 100%;
-    margin-bottom: 1vh;
+    margin-bottom: 1dvh;
 }
 
 section#contact form input, textarea {
     width: 100%;
-    margin-bottom: 1vh;
-    padding: 1vh;
-    border-radius: 1vw;
-    border: 1px solid #ccc;
+    margin-bottom: 1dvh;
+    padding: 1dvh;
+    border-radius: 1dvw;
+    border: 1px solid var(--border-color, #ccc);
+}
+
+section#contact form textarea {
+    height: 30vh;
+    resize: none;
+}
+
+section#contact form button {
+    background-color: var(--primary-color, #333);
+    color: white;
+    border: none;
+    padding: .5dvh 1dvw;
+    border-radius: 1dvw;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 

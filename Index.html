@@ -27,16 +27,17 @@
                 </picture>
                 <h1>Hi, I'm Dylan Olivares</h1>
                 <p>I am an enthusiastic software engineer looking for new opportunities.</p>
-                <aside>
+                <!-- <aside>
                     <p>Outside of coding I like to play volleyball and weightlift.</p>
-                </aside>
+                </aside> -->
             </section>
 
             <section id="projects">
                 <h2>Projects</h2>
                 <ol>
                     <li>
-                        <h2>Crypto Tracker</h2>
+                        <a href="https://github.com/dolivares11/Crypto-Tracker" target="_blank"></a>
+                        <h3>Crypto Tracker</h3>
                         <picture>
                             <source type="image/jxl" srcset="images/Project1.jxl">
                             <source type="image/png" srcset="images/Project1.png">
@@ -44,20 +45,22 @@
                         </picture>
                     </li>
                     <li>
-                        <h2>Palm Reading</h2>
+                        <h3>Palm Reading</h3>
                         <picture>
                             <source type="image/jxl" srcset="images/Project2.jxl">
                             <source type="image/jpeg" srcset="images/Project2.jpg">
                             <img src="images/Project2.jpg" alt="Project 2">
                         </picture>
+                        <a href="https://github.com/cse110-sp23-group3/cse110-sp23-group3" target="_blank"></a>
                     </li>
                     <li>
-                        <h2>Flutter Safety</h2>
+                        <h3>Flutter Safety</h3>
                         <picture>
                             <source type="image/jxl" srcset="images/Project3.jxl">
                             <source type="image/jpeg" srcset="images/Project3.jpg">
                             <img src="images/Project3.jpg" alt="Project 3">
                         </picture>
+                        <a href="https://github.com/Renzo-Olivares/flutter_virus" target="_blank"></a>
                     </li>
                 </ol>
             </section>
@@ -72,190 +75,24 @@
                 <button type="submit">Download</button>
             </section>
 
-            <section id="skills">
-                <h2>Skills</h2>
-                <table>
-                    <!-- <caption>Skills</caption> -->
-                    <colgroup>
-                        <col span="1">
-                        <col span="1">
-                        <col span="1">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>Frontend</th>
-                            <th>Backend</th>
-                            <th>Languages</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>HTML</td>
-                            <td>Node.js</td>
-                            <td>C++</td>
-                        </tr>
-                        <tr>
-                            <td>CSS</td>
-                            <td>Express</td>
-                            <td>Java</td>
-                        </tr>
-                        <tr>
-                            <td>JavaScript</td>
-                            <td>MySQL</td>
-                            <td>Python</td>
-                        </tr>
-                        <tr>
-                            <td>React</td>
-                            <td>MongoDB</td>
-                            <td>Dart</td>
-                        </tr>
-                        <tr>
-                            <td>Flutter</td>
-                            <td>Firebase</td>
-                            <td>MATLAB</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
             <section id="contact">
                 <h2>Contact</h2>
-                <p>Feel free to contact me</p>
                 <form action="mailto:example@gmail.com" method="POST">
-                    <label for="name">Name:
-                        <input type="text" name="name" id="name">
+                    <h3>Send me a message!</h3>
+                    <label for="name">
+                        <input type="text" name="name" id="name" placeholder="Full name">
                     </label>
-                    <label for="email">Email:
-                        <input type="email" name="email" id="email">
+                    <label for="email">
+                        <input type="email" name="email" id="email" placeholder="Email address">
                     </label>
-                    <label for="message">Message:
-                        <textarea name="message" id="message"></textarea>
+                    <label for="message">
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
                     </label>
                     <button type="submit">Send</button>
                 </form>
             </section>
-
-            <section id="experiment">
-                <h2>Experiment</h2>
-                <form>
-                    <fieldset>
-                        <legend>Favorite Food</legend>
-                        <label for="favFood">What is your favorite food?
-                            <input type="text" name="favFood" list="favFoodList" id="favFood">
-                            <datalist id="favFoodList">
-                                <option value="pizza"></option>
-                                <option value="burger"></option>
-                                <option value="taco"></option>
-                                <option value="pasta"></option>
-                                <option value="salad"></option>
-                            </datalist>
-                        </label>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Favorite School</legend>
-                        <label for="favSchool">What is your favorite school out of the UCs?
-                            <select name="favSchool" id="favSchool">
-                                <optgroup label="north">
-                                    <option value="UCSD">UCSD</option>
-                                    <option value="UCSB">UCSB</option>
-                                    <option value="UCLA">UCLA</option>
-                                    <option value="UCI">UCI</option>
-                                    <option value="UCR">UCR</option>
-                                </optgroup>
-                                <optgroup label="south">
-                                    <option value="UCSC">UCSC</option>
-                                    <option value="UCM">UCM</option>
-                                    <option value="UCD">UCD</option>
-                                    <option value="UCB">UCB</option>
-                                </optgroup>
-                            </select>
-                        </label>
-                    </fieldset>
-                    <button type="submit">Submit</button>
-                </form>
-                <details>
-                    <summary><b>My favorite food</b></summary>
-                    <p>Ice cream</p>
-                </details>
-
-                <div id="media/random">
-                    <h3>Figure</h3>
-                    <figure id="fig1">
-                        <img src="images/machuPichu.jpg" width="300" height="200" alt="Machu Pichu">
-                        <figcaption>This is Machu Pichu in Peru, and this is a place I aspire to go to one day.</figcaption>
-                    </figure>
-
-                    <h3>Audio</h3>
-                    <audio src="http://htmlref.com/ch2/music.wav" controls></audio>
-
-                    <h3>Canvas</h3>
-                    <canvas id="canvas">
-                        <strong>Canvas Supporting Browser Required</strong>
-                    </canvas>
-
-                    <h3>Video</h3>
-                    <video src="http://htmlref.com/ch2/html_5.mp4" autoplay controls>
-                        <strong>Video Supporting Browser Required</strong>
-                    </video>
-
-                    <h3>SVG</h3>
-                    <svg width="200" height="200">
-                        <circle cx="100" cy="100" r="50" fill="red" stroke="black" stroke-width="5"/>
-                    </svg>
-
-                    <h3>IFrame</h3>
-                    <iframe sandbox srcdoc="<p>I can practically make a new website in this iframe</p>"></iframe>
-
-                    <template>
-                        <h1> Hello, this will store my template</h1>
-                        <p> This is a template</p>
-                    </template>
-
-                    <h3>span, code, em, i, br</h3>
-                    <p>
-                        This is just filler text to <em>demonstrate</em> my <i>understanding</i> of the code, em, span, i, and br elements.
-                        <span>This is a span element that can be declared using <code>
-                            &lt;span&gt;&lt;/span&gt;
-                        </code>.</span>
-                        <br>
-                    </p>
-                    <br>
-                    <pre>
-                        This is a pre element, so therefore I can create a tic-tac-toe game
-                        X | O | X
-                        ---------
-                        O | X | O
-                        ---------
-                        X | O | X
-                    </pre>
-
-                    <h3>MathML</h3>
-                    <math xmlns="http://www.w3.org/1998/Math/MathML">
-                        <mrow>
-                            <mi>E</mi>
-                            <mo>=</mo>
-                            <mi>m</mi>
-                            <msup>
-                                <mi>c</mi>
-                                <mn>2</mn>
-                            </msup>
-                        </mrow>
-                      </math>
-                    <p>Extra Credit Question 2: The reason for developers not making use of MathML until recently was because
-                        there was no heavy wanted support for it as other browsers were not supporting it, then chrome didn't really see a reason to 
-                        do it themselves.
-                    </p>
-                    <script>
-                        var canvas = document.getElementById("canvas");
-                        var context = canvas.getContext("2d");
-                        context.fillStyle = "red";
-                        context.fillRect(10, 10, 100, 100);
-                    </script>
-                </div>
-            </section>
         </main>
         <footer>
-            <hr>
             <p>Created by Dylan Olivares</p>
         </footer>
     </body>
